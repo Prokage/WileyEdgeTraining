@@ -1,6 +1,5 @@
 #include<iostream>
-#include"double_linked_list.h"
-using namespace std;
+#include "double_linked_list.h"
 int main()
 {
 	head = NULL;
@@ -11,7 +10,11 @@ int main()
 		cout<<"\n1 InsertBegin";
 		cout<<"\n2 InsertEnd";
 		cout<<"\n3 InsertPos";
-		cout<<"\n4 Display";
+		cout<<"\n4 DeleteBegin";
+		cout<<"\n5 Swap Alternate";
+		cout<<"\n6 Sort from start to end pos";
+		cout<<"\n7 Display";
+		cout<<"\n8 Reverse Print";
 		cout<<"\n9 Exit";
 		cout<<"\n Enter choice = ";
 		cin>>ch;
@@ -34,8 +37,20 @@ int main()
 					cin>>ele;
 					insertPos(pos,ele);
 					break;
-			case 4:
-					display();break;
+			case 4: 
+					deleteBegin();
+					break;
+			case 5:
+					swapAlternate();
+					break;
+			case 6: 
+					cout<<"choose start pos: ";
+					cin>>start;
+					cout<<"choose end pos: ";
+					cin>>end;
+					sortList(start,end);
+			case 7:display();break;
+			case 8:printBackToFront();break;
 			case 9:break;
 			default:cout<<"\n Invalid choice \n";
 		}
